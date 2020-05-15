@@ -18,10 +18,18 @@
 #greeter-hide-users=false
 
 #download apps
-sudo apt install terminator nautilus-admin gedit git build-essential -yy
+sudo apt install terminator nautilus-admin gedit git build-essential chromium chromium-l10n -yy
 
 #remove apps
-sudo apt remove mousepad xterm thunar -yy
+sudo apt purge mousepad xterm thunar firefox firefox-locale-en -yy
+
+#remove firefox cache
+if [ -d "/home/$USER/.mozilla" ]; then
+    rm -rf /home/$USER/.mozilla
+fi
+if [ -d "/home/$USER/.cache/mozilla" ]; then
+    rm -rf /home/$USER/.cache/mozilla
+fi
 
 #setup zsh
 sudo apt install zsh-syntax-highlighting autojump zsh-autosuggestions
