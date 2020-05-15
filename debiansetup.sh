@@ -18,7 +18,7 @@
 #greeter-hide-users=false
 
 #download apps
-sudo apt install terminator nautilus-admin bc dkms gedit git build-essential chromium chromium-l10n -yy
+sudo apt install terminator nautilus-admin bc curl dkms gedit git build-essential chromium chromium-l10n -yy
 
 #remove apps
 sudo apt purge mousepad xterm thunar firefox-esr -yy
@@ -40,6 +40,14 @@ git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
 git clone https://github.com/zsh-users/zsh-completions.git
 #sudo nano /etc/passwd
 #update user from /bin/bash to /bin/zsh 
+
+#install vscode
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+sudo apt install apt-transport-https
+sudo apt update
+sudo apt install code
 
 #GAMING SECTION 
 #uncomment next line to download amd graphics drivers
