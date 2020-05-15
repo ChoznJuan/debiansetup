@@ -21,7 +21,7 @@
 sudo apt install terminator nautilus-admin gedit git build-essential chromium chromium-l10n -yy
 
 #remove apps
-sudo apt purge mousepad xterm thunar firefox firefox-locale-en -yy
+sudo apt purge mousepad xterm thunar firefox-esr -yy
 
 #remove firefox cache
 if [ -d "/home/$USER/.mozilla" ]; then
