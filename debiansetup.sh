@@ -20,14 +20,6 @@
 #download apps
 sudo apt install terminator nautilus-admin gedit git build-essential -yy
 
-#uncomment next line to download amd drivers
-#sudo apt install firmware-linux firmware-linux-nonfree libdrm-amdgpu1 xserver-xorg-video-amdgpu mesa-vulkan-drivers libvulkan1 vulkan-tools vulkan-utils vulkan-validationlayers mesa-opencl-icd
-
-#uncomment next lines to add multiarch for steam & wine support
-#sudo dpkg --add-architecture i386 && sudo apt update
-#sudo apt install wine wine32 wine64 libwine libwine:i386 fonts-wine
-
-
 #remove apps
 sudo apt remove mousepad xterm thunar -yy
 
@@ -41,5 +33,19 @@ git clone https://github.com/zsh-users/zsh-completions.git
 #sudo nano /etc/passwd
 #update user from /bin/bash to /bin/zsh 
 
+#GAMING SECTION 
+#uncomment next line to download amd graphics drivers
+#sudo apt install firmware-linux firmware-linux-nonfree libdrm-amdgpu1 xserver-xorg-video-amdgpu mesa-vulkan-drivers libvulkan1 vulkan-tools vulkan-utils vulkan-validationlayers mesa-opencl-icd
+
+#uncomment next lines to add multiarch for steam & wine support
+#sudo dpkg --add-architecture i386 && sudo apt update
+#sudo apt install wine wine32 wine64 libwine libwine:i386 fonts-wine
+
 #uncomment next lines to install steam
 #sudo apt install steam
+
+#uncomment next lines to install lutris
+#echo "deb http://download.opensuse.org/repositories/home:/strycore/Debian_10/ ./" | sudo tee /etc/apt/sources.list.d/lutris.list
+#wget -q https://download.opensuse.org/repositories/home:/strycore/Debian_10/Release.key -O- | sudo apt-key add -
+#sudo apt update
+#sudo apt install lutris
