@@ -18,7 +18,7 @@
 #greeter-hide-users=false
 
 #download apps
-sudo apt install terminator nautilus-admin bc curl dkms gedit git build-essential neofetch chromium chromium-l10n -yy
+sudo apt install terminator nautilus-admin bc curl dkms gedit git build-essential fastfetch chromium chromium-l10n -yy
 
 #remove apps
 sudo apt purge mousepad xfce4-terminal xterm thunar firefox-esr -yy
